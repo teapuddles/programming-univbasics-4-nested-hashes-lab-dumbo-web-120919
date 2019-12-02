@@ -109,7 +109,7 @@ def changing_alan
         }
      }
      alans_new_info = programmer_hash[:alan_kay][:languages] = "GUI"
-     return alans_new_info
+     return programmer_hash
      
 end
 
