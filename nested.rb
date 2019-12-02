@@ -58,7 +58,7 @@ def dennis_ritchies_language
           :languages => ["C"]
         }
      }
-     ritchie_info = programmer_hash[:dennis_ritchie][:languages].split("C")
+     ritchie_info = programmer_hash[:dennis_ritchie][:languages].to_s("C")
      return ritchie_info
 end
 
