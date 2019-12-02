@@ -15,7 +15,8 @@ def hopper
           :languages => ["C"]
         }
      }
-
+    hopper_info = programmer_hash[:grace_hopper]
+    return hopper_info
 
 end
 
@@ -37,6 +38,8 @@ def alan_kay_is_known_for
           :languages => ["C"]
         }
      }
+     kay_info = programmer_hash[:alan_kay][:known_for]
+     return kay_info
 end
 
 def dennis_ritchies_language
@@ -55,6 +58,8 @@ def dennis_ritchies_language
           :languages => ["C"]
         }
      }
+     ritchie_info = programmer_hash[:dennis_ritchie][:languages].join("")
+     return ritchie_info
 end
 
 def adding_matz
@@ -66,6 +71,10 @@ def adding_matz
 
 	programmer_hash = 
  		{
+ 		    :yukihiro_matsumoto => {
+ 		      :known_for => "Ruby",
+ 		      :languages => ["LISP", "C"]
+ 		    },
         :grace_hopper => {
           :known_for => "COBOL",
           :languages => ["COBOL", "FORTRAN"]
@@ -99,9 +108,8 @@ def changing_alan
           :languages => ["C"]
         }
      }
-     #change what Alan Kay is :known_for to the value of the alans_new_info variable. 
-     alans_new_info = "GUI"
-     
+     alans_new_info = programmer_hash[:alan_kay][:known_for] = "GUI"
+     return programmer_hash
      
 end
 
@@ -121,5 +129,8 @@ def adding_to_dennis
           :languages => ["C"]
         }
      }
+     ritchies_new_info = programmer_hash[:dennis_ritchie][:languages][1] = "Assembly"
+     return programmer_hash
+
 
 end
